@@ -1,0 +1,15 @@
+.example-card {
+  max-width: 500px;
+  border-style: hidden;
+  margin: 20em;
+}
+
+
+.tag-img {
+	width: 400px;
+	height: 300px;
+}
+
+* {
+	border-style: hidden;
+}

@@ -1,0 +1,35 @@
+
+<div *ngIf="user && liked != undefined" class="note">
+<div class="media">
+
+  <img class="mr-3" src="https://media.graytvinc.com/images/810*607/UNC+Tar+Heels2.jpg" alt="Generic placeholder image" (click)="gotoProfile(note.user_id)">
+  <div class="media-body">
+    <h5 (click)="gotoProfile(note.user_id)">{{user.name}}</h5>
+    <div>{{note.content}}
+    </div>
+    <br>
+      <span *ngIf="!liked" class="material-icons Icon" id="like" (click)="like()">favorite</span>
+      <span *ngIf="liked" class="material-icons Icon" id="liked">favorite</span>
+      <span class="material-icons Icon" id="comment" data-toggle="collapse" [attr.data-target]="'#comment' + note.id" aria-expanded="false" [attr.aria-controls]="'comment'+note.id">comment</span>
+    <div *ngFor="let comment of comments">
+    <div class="media mt-3">
+      <a class="pr-3">
+        <img src="https://media.graytvinc.com/images/810*607/UNC+Tar+Heels2.jpg" alt="Generic placeholder image" alt="Generic placeholder image" (click)="gotoProfile(comment.user_id)">
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0" (click)="gotoProfile(comment.user_id)">{{comment.name}}</h5>
+        {{comment.content}}
+      </div>
+      <span class="time">{{timeSince(comment.post_time)}} ago</span>
+    </div>
+  </div>
+</div>
+ <span class="time">{{timeSince(note.post_time)}} ago</span>
+</div>
+<div class="collapse" [attr.id]="'comment'+note.id">
+  <form (ngSubmit)="postComment()">
+      <textarea [formControl]="commentContent" class="form-control" rows="3" placeholder="Leave your message here!"></textarea>
+      <button class="btn btn-outline-success my-2 my-sm-2" type="submit" >Comment</button>
+  </form>
+  </div>
+</div>

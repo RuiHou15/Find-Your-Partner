@@ -1,0 +1,9 @@
+
+<div class="note-container">
+<div *ngIf="currentUser && notes">
+<p>Search Result for  "{{searchContent}}": </p> <br><br>
+<div class='note-display' *ngFor="let note of notes">
+	<note [note]= note></note>
+</div>
+</div>
+</div>

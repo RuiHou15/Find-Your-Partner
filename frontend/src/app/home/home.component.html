@@ -1,0 +1,6 @@
+<br><h3 style = "text-align: center;">Find Your Partner Here</h3><br>
+<mat-grid-list cols="12" rowHeight="500px">
+  <mat-grid-tile *ngFor="let tag of tags" colspan='6' class="card">
+    <app-card [tag]=tag> </app-card>
+  </mat-grid-tile>
+</mat-grid-list>

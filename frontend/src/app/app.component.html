@@ -1,0 +1,47 @@
+<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" routerLink="/">UNC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Home Page<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <div class="form-inline pull-xs-right">
+
+        <a *ngIf="isOnline()" class="nav-item nav-link" (click)="gotoProfile()" id='navbar-user'>
+            Hello, {{currentUser.name}}
+        </a>
+        <a *ngIf="isOnline()" class="btn-outline button" (click)="logout()">Logout</a>
+
+
+    <button *ngIf="!isOnline()" class="button" (click)="login()">Login/Signup</button>
+
+  </div>
+  </div>
+</nav>
+
+  <div class="form-inline search-note">
+    <search-note></search-note>
+  </div>
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <alert></alert>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+<!-- credits -->
+<div class="text-center">
+    <p>
+        <a href="https://campaign.unc.edu/" target="_top">campaign.unc.edu</a>
+    </p>
+</div>

@@ -1,0 +1,115 @@
+
+<mat-vertical-stepper linear #stepper>
+
+  <mat-step [stepControl]="idFormGroup">
+    <form [formGroup]="idFormGroup">
+      <ng-template matStepLabel>UNC ID</ng-template>
+      <mat-form-field>
+        <mat-label>UNC ID</mat-label>
+        <input matInput placeholder="Unc ID" formControlName="idCtrl" required>
+      </mat-form-field>
+      <div>
+      <mat-form-field>
+        <mat-label>UNC Email Address</mat-label>
+        <input matInput placeholder="******@live.unc.edu"
+        formControlName="emailCtrl">
+      </mat-form-field>
+    </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+
+    </form>
+  </mat-step>
+
+
+
+  <mat-step [stepControl]="nameFormGroup">
+    <form [formGroup]="nameFormGroup">
+      <ng-template matStepLabel>Real Name</ng-template>
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First name" formControlName="firstNameCtrl" required>
+      </mat-form-field>
+      <div>
+        <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last name" formControlName="lastNameCtrl" required>
+      </mat-form-field>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="passwordFormGroup">
+    <form [formGroup]="passwordFormGroup">
+      <ng-template matStepLabel>Password</ng-template>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="passwordCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="genderFormGroup">
+    <form [formGroup]="genderFormGroup">
+      <ng-template matStepLabel>Gender</ng-template>
+      <mat-form-field>
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="genderCtrl">
+          <mat-option [value]= "'F'" >Female</mat-option>
+          <mat-option [value]= "'M'" >Male</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step [stepControl]="departmentFormGroup">
+    <form [formGroup]="departmentFormGroup">
+      <ng-template matStepLabel>Department</ng-template>
+      <mat-form-field>
+        <mat-label>Department</mat-label>
+        <input matInput formControlName="departmentCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+<!--   <mat-step [stepControl]="avatarFormGroup">
+    <form [formGroup]="avatarFormGroup">
+      <ng-template matStepLabel>Upload your avatar(Optional)</ng-template>
+        <img src='...' alt="image shows here">
+        <br>
+        <input type="file" [formControl]="avatarCtrl" required>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step> -->
+
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are all set!</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="onSubmit()">Done</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

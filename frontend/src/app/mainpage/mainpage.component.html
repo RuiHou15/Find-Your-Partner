@@ -1,0 +1,9 @@
+
+<div class="note-container">
+<div *ngIf="currentUser && tag">
+	<post-note [user_id]="currentUser.user_id" [tag_id]="tag.id"></post-note>
+</div>
+<div class='note-display' *ngFor="let note of notes">
+	<note [note]= note></note>
+</div>
+</div>

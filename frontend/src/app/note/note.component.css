@@ -1,0 +1,27 @@
+.note h5:hover {
+	cursor: pointer;
+}
+
+.note img:hover {
+	cursor: pointer;
+}
+
+.time {
+	color: #4B9CD3;
+}
+
+#like {
+
+	color: red;
+}
+
+#liked {
+
+	color: red;
+	opacity: 1;
+}
+
+
+#comment {
+	color: #4B9CD3;
+}

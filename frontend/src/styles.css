@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+#toggleLogin {
+    
+    padding-right: 15px;
+    
+}
+
+#loginAlert {
+    
+    display:none;
+    
+}
+
+#map{
+       height: 400px;
+       width: 100%;
+    }
+
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc9.ttf) format('truetype');
+}
+
+.navbar {
+  background-color: #4B9CD3;
+}
+
+.button {
+  background-color: #4B9CD3;
+  color: white;
+  border: none;
+}
+
+.note {
+  border: 2px solid;
+  border-color: #F5F5F5;
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+.search-note {
+  position:relative;
+}
+
+.search-note search-note {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.material-icons:hover{
+  cursor: pointer;
+}
+
+.media {
+  margin-bottom: 2em;
+}
+.media img {
+  width: 64px;
+  height: 64px;
+}
+
+#navbar-user:hover {
+  cursor: pointer;
+}
+
+.Icon {
+  display: inline-block;
+  margin-right: 1em;
+  width: 1em;
+  height: 1.25em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: text-bottom;
+  opacity: 0.6;
+  transition: opacity 0.2s, background-image 0.2s;
+}
+.Icon:hover {
+  opacity: 1;
+}
+
